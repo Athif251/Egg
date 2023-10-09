@@ -20,7 +20,7 @@
     "TimeBeforeStoppingEmptyServer": 30,
     "SuspendAllow": false,
     "SuspendRefresh": -1,
-    "InfoHibernation": "                   §fserver status:\n                   §b§lHIBERNATING",
+    "InfoHibernation": "               &b&lServer Hibernating&r\n              &3&lPowered by croix.pro",
     "InfoStarting": "                   §fserver status:\n                    §6§lWARMING UP",
     "NotifyUpdate": true,
     "NotifyMessage": true,
@@ -29,4 +29,4 @@
     "ShowResourceUsage": false,
     "ShowInternetUsage": false
   }
-}
+} 
