@@ -5,7 +5,7 @@
         "update_url": null
     },
     "exported_at": "2023-10-12T10:40:07+02:00",
-    "name": "Vanilla Minecraft",
+    "name": "Vanilla Java",
     "author": "support@pterodactyl.io",
     "description": null,
     "features": [
@@ -19,7 +19,10 @@
         "Java 11": "ghcr.io\/pterodactyl\/yolks:java_11",
         "Java 8": "ghcr.io\/pterodactyl\/yolks:java_8"
     },
-    "file_denylist": [],
+    "file_denylist": [
+        "server.jar",
+        "./server.jar"
+    ],
     "startup": "java -Xms128M -XX:MaxRAMPercentage=95.0 -jar {{SERVER_JARFILE}}",
     "config": {
         "files": "{\r\n    \"server.properties\": {\r\n        \"parser\": \"properties\",\r\n        \"find\": {\r\n            \"server-ip\": \"0.0.0.0\",\r\n            \"server-port\": \"{{server.build.default.port}}\",\r\n            \"query.port\": \"{{server.build.default.port}}\"\r\n        }\r\n    }\r\n}",
@@ -36,18 +39,18 @@
     },
     "variables": [
         {
-            "name": "Server Jar File",
-            "description": "The name of the server jarfile to run the server with.",
+            "name": "Jar File",
+            "description": "",
             "env_variable": "SERVER_JARFILE",
             "default_value": "server.jar",
             "user_viewable": true,
-            "user_editable": true,
+            "user_editable": false,
             "rules": "required|regex:\/^([\\w\\d._-]+)(\\.jar)$\/",
             "field_type": "text"
         },
         {
-            "name": "Server Version",
-            "description": "The version of Minecraft Vanilla to install. Use \"latest\" to install the latest version, or use \"snapshot\" to install the latest snapshot. Go to Settings > Reinstall Server to apply.",
+            "name": "Minecraft Version",
+            "description": "",
             "env_variable": "VANILLA_VERSION",
             "default_value": "latest",
             "user_viewable": true,
